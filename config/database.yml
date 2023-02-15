@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  username: root
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: maria_development
+
+test:
+  <<: *default
+  database: maria_test
+
+production:
+  <<: *default
+  database: maria
